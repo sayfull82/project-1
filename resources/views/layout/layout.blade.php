@@ -109,8 +109,11 @@
                         </a>
                     </li>
                     <li class="nav-label">UI Components</li>
+
+                    @if (Auth::user()->role == 'admin')
+
                     <li>
-                        <a href="#" aria-expanded="false">
+                        <a href="setdiskon" aria-expanded="false">
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Setting Diskon</span>
                         </a>
                     </li>
@@ -119,18 +122,18 @@
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Data Master</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Data User</a></li>
-                            <li><a href="#">Data Jenis barang</a></li>
-                            <li><a href="#">Data Barang</a></li>
+                            <li><a href="/user">Data User</a></li>
+                            <li><a href="/jenisbarang">Data Jenis barang</a></li>
+                            <li><a href="/barang">Data Barang</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#" aria-expanded="false">
+                        <a href="/laporan" aria-expanded="false">
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Transaksi</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" aria-expanded="false">
+                        <a href="/transaksi" aria-expanded="false">
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Laporan</span>
                         </a>
                     </li>

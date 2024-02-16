@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex align-item-center">
-                            <h4 class="card-title">Data Berita</h4>
+                            <h4 class="card-title">{{ $title }}</h4>
                             <button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#modalCreate">
                                 <i class="fa fa-plus"></i>
                                 Tambah Data
@@ -119,11 +119,11 @@
                 <div class="modal-body">
                     <div class="form-grup">
                         <label>Nama Lengkap</label>
-                        <input type="text" class="form-control" name="name" placeholder="Nama Lengkap ..." required>
+                        <input type="text" value="{{ $d->name }}" class="form-control" name="name" placeholder="Nama Lengkap ..." required>
                     </div>
                     <div class="form-grup">
                         <label>Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="email ..." required>
+                        <input type="email" value="{{ $d->email }}" class="form-control" name="email" placeholder="email ..." required>
                     </div>
                     <div class="form-grup">
                         <label>Password</label>
